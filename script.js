@@ -3,6 +3,22 @@ const altura = document.getElementById("altura");
 const btnCalcular = document.getElementById("btnCalcular");
 const resultado = document.getElementById("resultado");
 
+peso.focus();
+
+peso.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    altura.focus();
+  }
+});
+
+altura.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    btnCalcular.click();
+  }
+});
+
 btnCalcular.addEventListener("click", () => {
   resultado.style.color = "";
 
