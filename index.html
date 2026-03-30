@@ -3,17 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Título da página -->
     <title>Calculadora IMC</title>
+
+    <!-- Bootstrap (estilização) -->
     <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css" />
+
+    <!-- CSS personalizado -->
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
+    <!-- ============================
+         CABEÇALHO
+    ============================ -->
     <header class="container mt-5 text-center">
       <h1>Calculadora de IMC</h1>
     </header>
 
+    <!-- ============================
+         CONTEÚDO PRINCIPAL
+    ============================ -->
     <main class="container mt-5">
       <section class="card p-4 shadow-sm mx-auto">
+        <!-- Input de peso -->
         <div class="mb-3">
           <label for="peso" class="form-label">Peso (kg)</label>
           <input
@@ -25,6 +39,7 @@
           />
         </div>
 
+        <!-- Input de altura -->
         <div class="mb-3">
           <label for="altura" class="form-label">Altura (cm)</label>
           <input
@@ -35,12 +50,15 @@
           />
         </div>
 
+        <!-- Botão de cálculo -->
         <button id="btnCalcular" class="btn btn-success w-100">Calcular</button>
 
+        <!-- Área onde o resultado será exibido -->
         <div id="resultado" class="mt-4 text-center fw-bold"></div>
       </section>
     </main>
 
+    <!-- Scripts -->
     <script src="Bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
   </body>
