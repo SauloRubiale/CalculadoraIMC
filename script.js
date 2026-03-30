@@ -5,6 +5,7 @@ const resultado = document.getElementById("resultado");
 
 peso.focus();
 
+// ENTER no peso → vai para altura
 peso.addEventListener("keydown", (event) => {
   if (event.key === "Enter") {
     event.preventDefault();
@@ -12,6 +13,7 @@ peso.addEventListener("keydown", (event) => {
   }
 });
 
+// ENTER na altura → calcula
 altura.addEventListener("keydown", (event) => {
   if (event.key === "Enter") {
     event.preventDefault();
@@ -20,40 +22,46 @@ altura.addEventListener("keydown", (event) => {
 });
 
 btnCalcular.addEventListener("click", () => {
-  resultado.style.color = "";
-
   if (peso.value > 0 && altura.value > 0) {
     const pesoValor = parseFloat(peso.value);
     const alturaMetros = parseFloat(altura.value) / 100;
 
     const imc = pesoValor / (alturaMetros * alturaMetros);
 
+    let mensagem = "";
+    let classe = "";
+
     if (imc < 18.5) {
-      resultado.style.color = "blue";
-
-      resultado.innerText = `Abaixo do peso (Magreza): ${imc.toFixed(2)}`;
-    } else if (imc >= 18.5 && imc < 25) {
-      resultado.style.color = "green";
-
-      resultado.innerText = `Eutrófico (Peso Normal ou Adequado): ${imc.toFixed(2)}`;
-    } else if (imc >= 25 && imc < 30) {
-      resultado.style.color = "darkorange";
-
-      resultado.innerText = `Sobrepeso (Pré-obesidade): ${imc.toFixed(2)}`;
-    } else if (imc >= 30 && imc < 35) {
-      resultado.style.color = "red";
-
-      resultado.innerText = `Obesidade Grau I: ${imc.toFixed(2)}`;
-    } else if (imc >= 35 && imc < 40) {
-      resultado.style.color = "red";
-
-      resultado.innerText = `Obesidade Grau II (Severa): ${imc.toFixed(2)}`;
-    } else if (imc >= 40) {
-      resultado.style.color = "darkred";
-
-      resultado.innerText = `Obesidade Grau III (Mórbida/Grave): ${imc.toFixed(2)}`;
+      classe = "alert-primary";
+      mensagem = `Abaixo do peso (Magreza): ${imc.toFixed(2)}`;
+    } else if (imc < 25) {
+      classe = "alert-success";
+      mensagem = `Eutrófico (Peso Normal ou Adequado): ${imc.toFixed(2)}`;
+    } else if (imc < 30) {
+      classe = "alert-warning";
+      mensagem = `Sobrepeso (Pré-obesidade): ${imc.toFixed(2)}`;
+    } else if (imc < 35) {
+      classe = "alert-danger";
+      mensagem = `Obesidade Grau I: ${imc.toFixed(2)}`;
+    } else if (imc < 40) {
+      classe = "alert-danger";
+      mensagem = `Obesidade Grau II (Severa): ${imc.toFixed(2)}`;
+    } else {
+      classe = "alert-dark";
+      mensagem = `Obesidade Grau III (Mórbida/Grave): ${imc.toFixed(2)}`;
     }
+
+    resultado.innerHTML = `<div class="alert ${classe} text-center" role="alert">
+      ${mensagem}
+    </div>`;
+
+    peso.value = "";
+    altura.value = "";
+
+    peso.focus();
   } else {
-    resultado.innerText = "Digite um valor válido";
+    resultado.innerHTML = `<div class="alert alert-secondary text-center" role="alert">
+      Digite valores válidos
+    </div>`;
   }
 });
