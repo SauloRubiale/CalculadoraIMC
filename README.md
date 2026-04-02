@@ -20,4 +20,4 @@ $$IMC = \frac{peso}{altura^2}$$
 *(Onde o peso é em kg e a altura é convertida de centímetros para metros).*
 
 ## 🔗 Link do Projeto
-[Clique aqui para testar a calculadora](https://saulorubiale.github.io/CalculadoraIMC/)
+Acesse o projeto: [AQbrir Calculadora de IMC](https://saulorubiale.github.io/CalculadoraIMC/)
