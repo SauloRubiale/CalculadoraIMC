@@ -35,7 +35,7 @@ IMC = \frac{peso}{altura^2}
 
 ## 🌐 Acesse o projeto
 
-👉 [Clique aqui para visualizar]((https://saulorubiale.github.io/CalculadoraIMC/))
+👉 [Clique aqui para visualizar](https://saulorubiale.github.io/CalculadoraIMC/)
 
 ---
 
