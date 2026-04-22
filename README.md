@@ -1,23 +1,65 @@
-# ⚖️ Calculadora de Índice de Massa Corporal (IMC)
+# ⚖️ Calculadora de IMC
 
-Projeto focado na experiência do usuário (UX) e na aplicação prática de lógica de programação para cálculo de saúde preventiva e classificação corporal.
+Aplicação web para cálculo do Índice de Massa Corporal (IMC), com foco em usabilidade, validação de dados e feedback visual para o usuário.
 
-## 🚀 Funcionalidades e Destaques
-- **Navegação Inteligente:** Uso de teclas de atalho (Enter) para alternar entre campos e disparar o cálculo, otimizando o fluxo do usuário.
-- **Feedback Visual:** Classificação baseada nas categorias da OMS com alertas coloridos via Bootstrap (Sucesso, Atenção, Perigo).
-- **Validação de Dados:** Tratamento de entradas para garantir que apenas valores positivos sejam processados.
-- **Responsividade:** Interface limpa e adaptável para dispositivos móveis e desktops utilizando Bootstrap 5.
+---
 
-## 🛠️ Tecnologias e Ferramentas
-- **Linguagem:** JavaScript (ES6+) - Manipulação de DOM e lógica condicional.
-- **Estilização:** HTML5, CSS3 e Bootstrap 5
-- **Versionamento:** Git & GitHub.
-- **Interface Git:** GitKraken.
+## 🚀 Funcionalidades
 
-## 🧮 A Lógica do Cálculo
-O projeto utiliza a fórmula padrão do IMC:
-$$IMC = \frac{peso}{altura^2}$$
-*(Onde o peso é em kg e a altura é convertida de centímetros para metros).*
+* 📊 Cálculo automático do IMC com base em peso e altura
+* 🎯 Classificação do resultado conforme categorias da OMS
+* 🎨 Feedback visual com cores indicativas (baixo peso, normal, sobrepeso, etc.)
+* ⌨️ Navegação otimizada com teclado (Enter para avançar e calcular)
+* ✅ Validação de dados para evitar entradas inválidas
+* 📱 Interface responsiva (Mobile-First com Bootstrap 5)
 
-## 🔗 Link do Projeto
-Acesse o projeto: [Abrir Calculadora de IMC](https://saulorubiale.github.io/CalculadoraIMC/)
+---
+
+## 🛠️ Tecnologias utilizadas
+
+* JavaScript (ES6+)
+* HTML5
+* CSS3
+* Bootstrap 5
+* Git & GitHub
+
+---
+
+## 🧮 Fórmula utilizada
+
+IMC = \frac{peso}{altura^2}
+
+> Peso em quilogramas (kg) e altura em metros (m).
+
+---
+
+## 🌐 Acesse o projeto
+
+👉 [Clique aqui para visualizar]((https://saulorubiale.github.io/CalculadoraIMC/))
+
+---
+
+## 📸 Preview
+
+
+<img width="710" height="617" alt="Captura de tela 2026-04-22 125028" src="https://github.com/user-attachments/assets/9f7d438a-3c17-415e-aacd-a5dc247ad022" />
+
+
+---
+
+## 📌 Aprendizados
+
+Neste projeto, pratiquei:
+
+* Manipulação do DOM
+* Estruturas condicionais para classificação de dados
+* Validação de entrada do usuário
+* Interação via teclado
+* Aplicação de feedback visual com Bootstrap
+
+---
+
+## 📎 Observações
+
+Projeto desenvolvido para consolidar fundamentos de lógica de programação e criação de interfaces interativas focadas no usuário.
+
